@@ -103,7 +103,7 @@ header h1 {
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--main-color);
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 .menu a:hover {
   font-weight: bold;
