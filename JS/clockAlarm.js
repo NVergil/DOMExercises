@@ -49,10 +49,12 @@ export const alarm = function(clock, btnPlay, btnStop, src){
       $audio.setAttribute('src', src);
       $alarma.appendChild($audio);
       $audio.play();
+      e.target.disabled = true;
     }
     if(e.target.matches(btnStop)){
       setTimeout(() => {
         $alarma.removeChild($audio);
+        d.querySelector(btnPlay).disabled = false;
       }, 500);
     }
   })

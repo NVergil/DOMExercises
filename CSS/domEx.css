@@ -110,3 +110,55 @@ header h1 {
   color: var(--second-color);
   background-color: var(--main-modal-color);
 }
+/* **********     Bloque con circulo interactivo     ********** */
+
+.stage {
+  display: flex;
+  min-height: 50vh;
+  background-color: var(--second-color);
+  margin: 0 auto;
+}
+.ball {
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+/* **********     Cuenta Regresiva     ********** */
+
+#countdown {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.countdown-container {
+  display: flex;
+  width: 130px;
+  height: 135px;
+  background-color: var(--second-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.timeCount {
+  height: 55%;
+  width: 70%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.paraCount {
+ font-size: 1.5rem; 
+ font-weight: 500;
+ color: darkgrey;
+}
