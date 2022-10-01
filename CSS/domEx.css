@@ -110,6 +110,75 @@ header h1 {
   color: var(--second-color);
   background-color: var(--main-modal-color);
 }
+/* **********     Reloj Digital y Alarma Sonora     ********** */
+
+.containerBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.clockButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  color: black;
+}
+.btn-7 {
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a3f0ff, #6DD5FA, #1e71a8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a3f0ff, #6DD5FA, #1e71a8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+
+  padding: 0;
+  border: none;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgb(52, 202, 247);
+  box-shadow:
+  -7px -7px 20px 0px rgba(255,255,255,.9),
+  -4px -4px 5px 0px rgba(255,255,255,.9),
+  7px 7px 20px 0px rgba(0,0,0,.2),
+  4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+  height: 0%;
+  width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover{
+  color: rgb(52, 202, 247);
+  background: transparent;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+
 /* **********     Bloque con circulo interactivo     ********** */
 
 .stage {
