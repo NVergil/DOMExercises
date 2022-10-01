@@ -1,0 +1,272 @@
+/* **********     Reset CSS     ********** */
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: #f7df1e;
+  --second-color: #222;
+  --main-modal-color: rgba(247,222,30,0.85);
+  --second-modal-color: rgba(34,34,43,0.85); 
+  --container-width: 1200px;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  z-index: 997;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  color: white;
+}
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+/* **********     Hamburger Menu     ********** */
+.section {
+  padding: 2rem;
+  padding-top: 4rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+#section1 {
+  margin-top: -4.3rem;
+}
+.panel {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 998;
+  background-color: var(--second-modal-color);
+  opacity: 0;
+  transition: transform .3s ease, opacity .3s ease;
+  /* De arriba */
+  /* transform: translate(0, -100%); */
+  /* De abajo */
+  /* transform: translate(0, 100%); */
+  /* De la derecha */
+  /* transform: translate(100%, 0); */
+  /* De la izquierda */
+  transform: translate(-100%, 0);
+}
+.panel.is-active {
+  transform: translate(0,0);
+  opacity: 1;
+}
+.panel-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vh;
+  width: 3rem;
+  height: 3rem;
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--main-color); */
+}
+.menu {
+  width: inherit;
+  text-align: center;
+}
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.menu a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+.btnTop {
+  border: none;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+  bottom: 1vh;
+  left: 1vh;
+  transform: translate(0, 200%);
+  transition: transform .3s ease;
+}
+.btnTop.is-active {
+  transform: translate(0,0);
+}
+.btnTop:hover {
+  filter: brightness(1.1);
+}
+.btnTop img {
+  width: 90%;
+}
+/* **********     Reloj Digital y Alarma Sonora     ********** */
+.containerBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 auto;
+}
+.clockButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+   outline: none;
+  }
+  .btn-7 {
+    background: #2C3E50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  border: none;
+  z-index: 1;
+}
+.btn-7:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  border-radius: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-7:hover {
+  color: #fff;
+}
+.btn-7:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-7:active {
+  top: 2px;
+}
+/* **********     Bloque con circulo interactivo     ********** */
+
+.stage {
+  display: flex;
+  min-height: 50vh;
+  background-color: var(--second-color);
+  margin: 0 auto;
+}
+.ball {
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+/* **********     Cuenta Regresiva     ********** */
+
+#countdown {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.countdown-container {
+  display: flex;
+  width: 130px;
+  height: 135px;
+  background-color: var(--second-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.timeCount {
+  height: 55%;
+  width: 70%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.paraCount {
+  font-size: 1.5rem; 
+  font-weight: 500;
+  color: darkgrey;
+}
+
+/* **********     @medias     ********** */
+
+@media screen and (max-width: 450px) {
+  .clockButtons {
+    transform: scale(.7);
+    margin: -5px -10px;
+  }
+  .containerBtns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
