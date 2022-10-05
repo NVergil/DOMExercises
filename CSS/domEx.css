@@ -26,6 +26,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+.darkTheme{
+  background-color: #0F2027;
+  color: white;
+}
 
 img {
   max-width: 100%;
@@ -117,8 +121,9 @@ header h1 {
   color: var(--second-color);
   background-color: var(--main-modal-color);
 }
+/* **********     Button Scroll to Top     ********** */
 .btnTop {
-  border: none;
+  z-index: 999;
   display: flex;
   justify-content: center;
   border-radius: 50%;
@@ -131,7 +136,9 @@ header h1 {
   background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #4CA1AF, #2C3E50);
   bottom: 1vh;
-  left: 1vh;
+  right: calc(3.25rem + 1vh);
+  outline: 0;
+  border: 0;
   transform: translate(0, 200%);
   transition: transform .3s ease;
 }
@@ -143,6 +150,26 @@ header h1 {
 }
 .btnTop img {
   width: 90%;
+}
+/* **********     Theme Button     ********** */
+.theme-Btn {
+  position: fixed;
+  bottom: 1vh;
+  left: 1vh;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: #2C3E50;
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+}
+.theme-Btn:hover {
+  transition: all 0.35s ease;
+  filter: contrast(0.7) brightness(1.2);
 }
 /* **********     Reloj Digital y Alarma Sonora     ********** */
 .containerBtns {

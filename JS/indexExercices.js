@@ -3,6 +3,7 @@ import { relojDigital, alarm } from "./clockAlarm.js";
 import { moveBall, shortcutsKeyboard } from "./keyboardEvents.js";
 import countdown from "./cuentaRegresiva.js";
 import btnScroll from "./btnScroll.js";
+import themeButton from "./themeBtn.js";
 
 const d = document;
 
@@ -16,6 +17,7 @@ d.addEventListener('DOMContentLoaded', e=>{
     'Feliz Año Nuevo! 🎆'
     );
     btnScroll('.btnTop');
+    themeButton('.theme-Btn', '.body');
 })
 
 d.addEventListener('keydown', e=>{
