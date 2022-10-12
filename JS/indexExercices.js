@@ -16,11 +16,12 @@ d.addEventListener('DOMContentLoaded', e=>{
     'Jan, 2023 24:00:00', 
     'Feliz Año Nuevo! 🎆'
     );
-    btnScroll('.btnTop');
-    themeButton('.theme-Btn', '.body');
+  btnScroll('.btnTop');
 })
-
+  
 d.addEventListener('keydown', e=>{
   shortcutsKeyboard(e);
   moveBall(e,'.ball','.stage');
 })
+
+themeButton('.theme-Btn', '.body');
