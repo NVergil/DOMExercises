@@ -24,9 +24,9 @@ const userDeviceInfo = (id)=> {
     chrome: ()=> ua.match(/chrome/i),
     safari: ()=> ua.match((/safari/i)),
     firefox: ()=> ua.match(/firefox/i),
-    opera: ()=> ua.match(/opr|opera mini/i),
+    opera: ()=> ua.match(/opr|opera mini|opx/i),
     ie: ()=> ua.match(/msie|iemobile/i),
-    edge: ()=> ua.match(/edg/i),
+    edge: ()=> ua.match(/edg|edge/i),
     any: function() {
       return (
         this.opera() ||
