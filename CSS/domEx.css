@@ -15,6 +15,7 @@ html {
   font-family: var(--main-font);
   font-size: var(--font-size);
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 *,
@@ -109,7 +110,7 @@ header h1 {
   text-align: center;
 }
 .menu a {
-  padding: 2rem;
+  padding: 1.80rem;
   width: inherit;
   display: block;
   font-size: 1.5rem;
@@ -198,6 +199,7 @@ header h1 {
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
    outline: none;
+  font-family: 'Poppins', sans-serif;
 }
 .btn-7 {
   background: #2C3E50;  /* fallback for old browsers */
@@ -309,6 +311,7 @@ header h1 {
    outline: none;
    margin: 0 auto;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .btn-7_responsiveJS {
@@ -407,6 +410,12 @@ form .textBlock:focus {
   top: 2px;
 }
 
+/* **********     User Agent Design     ********** */
+
+.ulSection_6 {
+  list-style-type: none;
+}
+
 /* **********     @medias     ********** */
 
 @media screen and (max-width: 450px) {
@@ -420,18 +429,28 @@ form .textBlock:focus {
   }
 }
 
-@media screen and (max-height: 940px) {
+@media screen and (max-height: 1030px) {
   .menu a {
     padding: 1.5rem;
   }
 }
-@media screen and (max-height: 785px) {
+@media screen and (max-height: 950px) {
   .menu a {
     padding: 1rem;
   }
 }
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 800px) {
   .menu a {
     padding: .5rem;
+  }
+}
+@media screen and (max-height: 650px) {
+  .menu a {
+    padding: .1rem;
+  }
+}
+@media screen and (max-height: 650px) {
+  .menu a {
+    font-size: 1.4rem;
   }
 }

@@ -8,8 +8,8 @@ export const moveBall = function(e, ball, stage) {
   $stage = d.querySelector(stage),
   limitsBall = $ball.getBoundingClientRect(),
   limitsStage = $stage.getBoundingClientRect()
-  console.log(e.keyCode);
-  console.log(limitsBall, limitsStage)
+  // console.log(e.keyCode);
+  // console.log(limitsBall, limitsStage);
 
 switch (e.keyCode) {
   case 37: // Left
