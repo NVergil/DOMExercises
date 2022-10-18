@@ -468,9 +468,25 @@ form .textBlock:focus {
 
 /* **********     WebCam Detection     ********** */
 
+webcamContainer {
+  margin: 0 auto;
+  height: 100px;
+}
+
 video {
   height: 200px;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 335px) {
+  video {
+    height: 160px;
+  }
+}
+@media screen and (max-width: 290px) {
+  video {
+    height: 140px;
+  }
 }
 
 a {
