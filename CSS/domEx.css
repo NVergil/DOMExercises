@@ -28,10 +28,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-.darkTheme{
-  background-color: #0F2027;
-  color: white;
-}
 
 img {
   max-width: 100%;
@@ -46,6 +42,9 @@ header {
   background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
   color: white;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
 }
 header h1 {
   margin: 0;
@@ -242,6 +241,9 @@ header h1 {
   min-height: 50vh;
   background-color: var(--second-color);
   margin: 0 auto;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
 }
 .ball {
   margin: auto;
@@ -269,6 +271,9 @@ header h1 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
 }
 
 .timeCount {
@@ -289,7 +294,6 @@ header h1 {
 }
 
 /* **********     Diseño de apartado Responsive con JavaScript Mobile Buttons     ********** */
-
 .btn-7_responsiveJS {
   display: flex;
   justify-content: center;
@@ -355,6 +359,17 @@ header h1 {
 
 /* **********     Responsive Tester Diseño     ********** */
 
+form {
+  background-color: #2C5364;
+  width: 250px;
+  padding: 20px 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+}
+
 form .textBlock {
   margin: 0 auto;
   display: block;
@@ -399,6 +414,9 @@ form .textBlock:focus {
    margin: 0 auto;
   margin-bottom: 20px;
 }
+.testerButtons:last-child {
+  margin-bottom: 0;
+}
 .testerButtons {
   background: #2C3E50;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
@@ -414,7 +432,59 @@ form .textBlock:focus {
 
 .ulSection_6 {
   list-style-type: none;
+  padding: 0;
 }
+
+/* **********     Network Status     ********** */
+
+.online,
+.offline {
+  position: sticky;
+  top: 0;
+  left: 50vw;
+  z-index: 1000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(14, 106, 11, 0.800);
+  color: #fff;
+}
+
+.offline {
+  background-color: rgba(128, 1, 1, 0.800);
+}
+
+.paraSection7 {
+  background-color: #2C5364;
+  border-radius: 1rem;
+  font-weight: bold;
+  max-width: 650px;
+  margin: 0 auto;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+}
+
+/* **********     WebCam Detection     ********** */
+
+video {
+  height: 200px;
+  border-radius: 10px;
+}
+
+a {
+  color: white;
+}
+
+/* **********     Geolocation Detection     ********** */
+
+.ulSection_9 {
+  list-style-type: none;
+  padding: 0;
+}
+
+
 
 /* **********     @medias     ********** */
 
@@ -453,4 +523,9 @@ form .textBlock:focus {
   .menu a {
     font-size: 1.4rem;
   }
+}
+
+.darkTheme{
+  background-color: #0F2027;
+  color: white;
 }

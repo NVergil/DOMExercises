@@ -7,6 +7,9 @@ import themeButton from "./themeBtn.js";
 import responsiveMedia from "./objResponsive.js";
 import responsiveTester from "./responsiveTest.js";
 import userDeviceInfo from "./userAgent.js";
+import networkStatus from "./networkStatus.js";
+import webCam from "./webcamDetection.js";
+import getPosition from "./geolocationDetection.js";
 
 const d = document;
 
@@ -24,6 +27,7 @@ d.addEventListener('DOMContentLoaded', e=>{
   responsiveMedia('gmaps', '(min-width:750px)', `<button class="btn-7_responsiveJS"><a href="https://goo.gl/maps/tmQxm9F8VcjeUb348" target="_blank" rel="noopener">Torre Latinoamericana</a></button>`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.501782316848!2d-99.14283685126111!3d19.433920986819185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92b5b005b95%3A0x4da8ca5798c532b7!2sTorre%20Latinoamericana%2C%20Eje%20Central%20L%C3%A1zaro%20C%C3%A1rdenas%202%2C%20Centro%20Hist%C3%B3rico%20de%20la%20Cdad.%20de%20M%C3%A9xico%2C%20Centro%2C%20Cuauht%C3%A9moc%2C%2006000%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1665882651536!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`);
   responsiveTester('responsive-tester');
   userDeviceInfo('user-device');
+  webCam('webcam', '#activateWebCam');
 })
   
 d.addEventListener('keydown', e=>{
@@ -32,3 +36,5 @@ d.addEventListener('keydown', e=>{
 })
 
 themeButton('.theme-Btn', '.body');
+networkStatus();
+getPosition('gl_position', '#getPosButton');
