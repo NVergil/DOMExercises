@@ -27,7 +27,7 @@ export const searchFilter = (input, roboCards)=> {
       d.querySelectorAll(roboCards)
       .forEach(el => el.textContent
       .toLowerCase()
-      .includes(e.target.value)?
+      .includes(e.target.value.toLowerCase())?
       el.classList.remove('filter'): 
       el.classList.add('filter'))
       // console.log(e.target.value)
