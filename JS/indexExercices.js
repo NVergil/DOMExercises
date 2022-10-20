@@ -10,6 +10,7 @@ import userDeviceInfo from "./userAgent.js";
 import networkStatus from "./networkStatus.js";
 import webCam from "./webcamDetection.js";
 import getPosition from "./geolocationDetection.js";
+import { roboCardsCreator, searchFilter } from "./searchFilter.js";
 
 const d = document;
 
@@ -28,6 +29,8 @@ d.addEventListener('DOMContentLoaded', e=>{
   responsiveTester('responsive-tester');
   userDeviceInfo('user-device');
   webCam('webcamContainer', '#activateWebCam');
+  roboCardsCreator('.roboContainer');
+  searchFilter('.cardFilter', '.cards');
 })
   
 d.addEventListener('keydown', e=>{

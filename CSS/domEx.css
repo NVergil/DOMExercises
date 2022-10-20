@@ -57,7 +57,7 @@ header h1 {
   margin: 0 auto;
   width: 100%;
   max-width: var(--container-width);
-  min-height: 100vh;
+  min-height: 50vh;
   text-align: center;
 }
 #section1 {
@@ -109,7 +109,7 @@ header h1 {
   text-align: center;
 }
 .menu a {
-  padding: 1.80rem;
+  padding: .50rem;
   width: inherit;
   display: block;
   font-size: 1.5rem;
@@ -500,8 +500,54 @@ a {
   padding: 0;
 }
 
+/* **********     Search Filter     ********** */
 
+.roboContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
 
+.cards {
+  background-color: #326980;
+  height: 230px;
+  width: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+.cards img {
+  width: 100%;
+  margin-bottom: -20px;
+}
+
+.cards h2 {
+  margin: 0;
+  font-size: 100%;
+}
+
+.filter {
+  display: none;
+}
+
+@media screen and (max-width: 630px) {
+  .cards {
+    height: 170px;
+    width: 150px;
+  }
+}
 /* **********     @medias     ********** */
 
 @media screen and (max-width: 450px) {
@@ -515,29 +561,39 @@ a {
   }
 }
 
-@media screen and (max-height: 1030px) {
+@media screen and (max-height: 980px) {
   .menu a {
-    padding: 1.5rem;
+    padding: .30rem;
   }
 }
-@media screen and (max-height: 950px) {
+@media screen and (max-height: 880px) {
   .menu a {
-    padding: 1rem;
+    padding: .20rem;
   }
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 840px) {
   .menu a {
-    padding: .5rem;
+    padding: .10rem;
   }
 }
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 790px) {
   .menu a {
-    padding: .1rem;
+    padding: .01rem;
   }
 }
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 750px) {
   .menu a {
     font-size: 1.4rem;
+  }
+}
+@media screen and (max-height: 610px) {
+  .menu a {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-height: 490px) {
+  .menu a {
+    font-size: 1.1rem;
   }
 }
 
