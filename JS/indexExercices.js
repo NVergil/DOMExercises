@@ -11,6 +11,8 @@ import networkStatus from "./networkStatus.js";
 import webCam from "./webcamDetection.js";
 import getPosition from "./geolocationDetection.js";
 import { roboCardsCreator, searchFilter } from "./searchFilter.js";
+import { lottery } from "./lottery.js";
+import slider from "./sliderImg.js";
 
 const d = document;
 
@@ -31,6 +33,8 @@ d.addEventListener('DOMContentLoaded', e=>{
   webCam('webcamContainer', '#activateWebCam');
   roboCardsCreator('.roboContainer');
   searchFilter('.cardFilter', '.cards');
+  lottery('.participantsInput', '.addUser','.participantList', '.guiltyUser', '.users');
+  slider();
 })
   
 d.addEventListener('keydown', e=>{

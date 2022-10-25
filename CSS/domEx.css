@@ -28,7 +28,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -370,7 +369,7 @@ form {
   -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
 }
 
-form .textBlock {
+.textBlock {
   margin: 0 auto;
   display: block;
   height: 2.375rem;
@@ -383,11 +382,11 @@ form .textBlock {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-form .textBlock::placeholder {
+.textBlock::placeholder {
   font-family: 'Poppins';
   font-size: medium;
 }
-form .textBlock:focus {
+.textBlock:focus {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -536,13 +535,87 @@ a {
 .filter {
   display: none;
 }
-
 @media screen and (max-width: 630px) {
   .cards {
     height: 170px;
     width: 150px;
   }
 }
+
+/* **********     Search Filter     ********** */
+
+#section11 div {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.inputButton {
+  margin: 0;
+}
+
+/* **********     Lottery Game     ********** */
+
+.participantList {
+  padding: 0;
+}
+
+/* **********     Responsive Slider     ********** */
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid black;
+}
+
+.slider-slides {
+  position: relative;
+  height: 500px;
+  max-height: 500px;
+  width: 100%;
+}
+
+.slider-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+
+.slider-slide img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.slider-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider-btns {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider a {
+  font-size: 4rem;
+  font-weight: bold;
+  width: 2rem;
+  text-decoration: none;
+}
+
 /* **********     @medias     ********** */
 
 @media screen and (max-width: 450px) {
@@ -574,6 +647,11 @@ a {
 @media screen and (max-height: 790px) {
   .menu a {
     padding: .01rem;
+  }
+}
+@media screen and (max-height: 768px) {
+  .section {
+    min-height: 100vh;
   }
 }
 @media screen and (max-height: 750px) {
