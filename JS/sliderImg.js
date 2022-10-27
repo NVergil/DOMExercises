@@ -17,7 +17,17 @@ let i = 0;
 
       $slides[i].classList.add('active');
     }
-    if (e.target === $prevBtn) {}
+    if (e.target === $nextBtn) {
+      e.preventDefault();
+      $slides[i].classList.remove('active');
+      i++;
+
+      if (i >= $slides.length) {
+        i = 0;
+      }
+
+      $slides[i].classList.add('active');
+    }
   })
 }
 

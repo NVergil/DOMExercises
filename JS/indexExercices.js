@@ -13,6 +13,8 @@ import getPosition from "./geolocationDetection.js";
 import { roboCardsCreator, searchFilter } from "./searchFilter.js";
 import { lottery } from "./lottery.js";
 import slider from "./sliderImg.js";
+import scrollSpy from "./scrollSpy.js";
+import smartVideo from "./smartVideo.js";
 
 const d = document;
 
@@ -35,6 +37,8 @@ d.addEventListener('DOMContentLoaded', e=>{
   searchFilter('.cardFilter', '.cards');
   lottery('.participantsInput', '.addUser','.participantList', '.guiltyUser', '.users');
   slider();
+  scrollSpy();
+  smartVideo();
 })
   
 d.addEventListener('keydown', e=>{
