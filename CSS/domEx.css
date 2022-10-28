@@ -1,7 +1,7 @@
 /* **********     Reset CSS     ********** */
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 :root {
-  --main-font: sans-serif;
+  --main-font: 'Poppins';
   --font-size: 16px;
   --main-color: #f7df1e;
   --second-color: #222;
@@ -366,7 +366,8 @@ header h1 {
 
 form {
   background-color: #2C5364;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   padding: 20px 0;
   margin: 0 auto;
   border-radius: 10px;
@@ -481,6 +482,9 @@ webcamContainer {
 video {
   height: 200px;
   border-radius: 10px;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
 }
 
 @media screen and (max-width: 335px) {
@@ -626,6 +630,134 @@ a {
   width: 2rem;
   text-decoration: none;
 }
+
+/* **********     Search Filter     ********** */
+
+video[data-smart-video] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+video[data-smart-video].active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* **********     Formulary     ********** */
+
+#section14 form {
+  width: 80%;
+  max-width: 800px;
+}
+
+.contact-form > * {
+  margin: 0.2rem auto;
+  width: 80%;
+}
+
+.contact-form {
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  /* margin-left: auto;
+  margin-right: auto;
+  width: 80%; */
+}
+
+.contact-form textarea {
+  resize: none;
+  border-radius: 5px;
+  font-family: var(--main-font), sans-serif;
+  display: block;
+}
+
+.contact-form textarea::placeholder {
+  font-size: 1rem;
+}
+
+.contact-form legend,
+.contact-form-response {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-form input[type="submit"] {
+  font-size: 1rem;
+  margin: 1rem auto;
+}
+
+.contact-form [required]:valid {
+  border: 3px solid var(--form-ok-color);
+}
+
+/* .contact-form [required]:invalid {
+  border: 3px solid var(--form-error-color);
+} */
+
+.contact-form-error {
+  margin-top: 0.2rem;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  font-size: 80%;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+.narrator-container {
+  /* display: block; */
+  background-color: #2C5364;
+  width: 100%;
+  max-width: 30rem;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -webkit-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 10px 17px -2px rgba(0,0,0,0.72);
+}
+
+.narrator-container textarea {
+  resize: none;
+  width: 80%;
+  max-width: 30rem;
+  margin: 1rem auto;
+}
+
+.narrator-container * {
+  display: block;
+  margin: 0 auto;
+  max-width: 18rem;
+}
+
+
 
 /* **********     @medias     ********** */
 

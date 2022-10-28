@@ -4,9 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" 
+    integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="CSS/domEx.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <title>DOMExercices</title>
 </head>
 <body class="body">
@@ -34,8 +44,8 @@
       <a href="#section11" data-scroll-spy>Encuentra al culpable</a>
       <a href="#section12" data-scroll-spy>Responsive Slider</a>
       <a href="#section13" data-scroll-spy>Smart Video</a>
-      <a href="#section14" data-scroll-spy>Section 14</a>
-      <a href="#section15" data-scroll-spy>Section 15</a>
+      <a href="#section14" data-scroll-spy>Validaciones de Formulario</a>
+      <a href="#section15" data-scroll-spy>Narrator</a>
     </nav>
   </div>
   <main>
@@ -118,22 +128,22 @@
       <div class="slider">
         <div class="slider-slides">
           <div class="slider-slide active">
-              <img src="assets/slider_images/pexels-pixabay-355904.jpg" alt="">
+              <img src="assets/slider_images/pexels-pixabay-355904.jpg" alt="tech">
           </div>
           <div class="slider-slide">
-              <img src="assets/slider_images/pexels-maurício-mascaro-712786.jpg" alt="">
+              <img src="assets/slider_images/pexels-maurício-mascaro-712786.jpg" alt="tech">
           </div>
           <div class="slider-slide">
-              <img src="assets/slider_images/pexels-fauxels-3184454.jpg" alt="">
+              <img src="assets/slider_images/pexels-fauxels-3184454.jpg" alt="tech">
         </div>
           <div class="slider-slide">
-              <img src="assets/slider_images/pexels-scott-webb-430208.jpg" alt="">
+              <img src="assets/slider_images/pexels-scott-webb-430208.jpg" alt="tech">
         </div>
           <div class="slider-slide">
-              <img src="assets/slider_images/pexels-thisisengineering-3862132.jpg" alt="">
+              <img src="assets/slider_images/pexels-thisisengineering-3862132.jpg" alt="tech">
         </div>
           <div class="slider-slide">
-              <img src="assets/slider_images/pexels-thisisengineering-3862632.jpg" alt="">
+              <img src="assets/slider_images/pexels-thisisengineering-3862632.jpg" alt="tech">
         </div>
       </div>
       <div class="slider-btns">
@@ -145,13 +155,48 @@
     <section id="section13" class="section" data-scroll-spy>
       <h2>Smart Video</h2> 
       <h3>Preso de la Soledad [Porta]</h3>
-      <video src="assets/Preso De La Soleda[1].mp4" muted style="width: 100%; max-width: 400px; height: auto;" controls data-smart-video></video>
+      <video src="assets/Preso De La Soleda[1].mp4" class="animate__animated" loop muted style="width: 100%; max-width: 400px; height: auto;" controls data-smart-video></video>
     </section>
     <section id="section14" class="section" data-scroll-spy>
-      <h2>Section 14</h2> 
+      <h2>Validaciones de Formulario</h2> 
+      <!-- <h3>Envíanos tus comentarios</h3> -->
+      <form class="contact-form" action="https://formsubmit.co/asca123321@gmail.com" method="POST" target="_blank">
+        <legend>Envíanos tus comentarios</legend>
+        <br>
+        <input 
+        class="textBlock" type="text" name="name" placeholder="Escribe tu nombre" 
+        title="Por favor utiliza solo letras y espacios" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+        <br>
+        <input 
+        class="textBlock" type="email" name="email" placeholder="Ingresa tu email" 
+        title="example@mail.com" pattern="[a-z0-9_]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" 
+        required>
+        <br>
+        <input 
+        class="textBlock" type="text" name="subject" 
+        placeholder="Asunto" title="Campo requerido" required>
+        <br>
+        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" 
+        title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+        <input class="btn-7_responsiveJS" type="submit" value="Send" id="submit">
+        <div class="contact-form-loader none">
+          <img src="assets/three-dots.svg" alt="Cargando">
+        </div>
+        <div class="contact-form-response none">
+          <p>Los datos han sido enviados</p>
+        </div>
+      </form>
     </section>
     <section id="section15" class="section" data-scroll-spy>
-      <h2>Section 15</h2> 
+      <h2>Narrador</h2>
+        <div class="narrator-container">
+          <select id="speech-select">
+          <option value="">--- Select Voice</option>
+          <br><br>
+          <textarea id="speech-text" cols="50" rows="5" placeholder="Ingresa el texto a leer..."></textarea>
+          <button class="btn-7_responsiveJS" id="speech-button">Leer Texto</button>
+        </div>
+      </select> 
     </section>
   </main>
   <button class="btnTop" id="btnScroll"><a href="#section1 "><img src="assets/angle-up.svg" alt=""></a></button>

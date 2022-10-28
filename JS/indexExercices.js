@@ -15,6 +15,8 @@ import { lottery } from "./lottery.js";
 import slider from "./sliderImg.js";
 import scrollSpy from "./scrollSpy.js";
 import smartVideo from "./smartVideo.js";
+import contactFormValidation from "./validationForm.js";
+import speechReader from "./narratorAPI.js";
 
 const d = document;
 
@@ -39,6 +41,7 @@ d.addEventListener('DOMContentLoaded', e=>{
   slider();
   scrollSpy();
   smartVideo();
+  contactFormValidation();
 })
   
 d.addEventListener('keydown', e=>{
@@ -49,3 +52,4 @@ d.addEventListener('keydown', e=>{
 themeButton('.theme-Btn', '.body');
 networkStatus();
 getPosition('gl_position', '#getPosButton');
+speechReader();

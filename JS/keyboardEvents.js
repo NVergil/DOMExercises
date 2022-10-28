@@ -14,7 +14,7 @@ export const moveBall = function(e, ball, stage) {
 switch (e.keyCode) {
   case 37: // Left
   if(limitsBall.left > limitsStage.left){
-    e.preventDefault(); // esto es para que no se mueva la barra de scroll con las teclas flecha
+    // e.preventDefault(); // esto es para que no se mueva la barra de scroll con las teclas flecha
     x--;
   }
   break;
@@ -26,7 +26,7 @@ switch (e.keyCode) {
   break;
   case 39: // Right
   if(limitsBall.right < limitsStage.right){
-    e.preventDefault();
+    // e.preventDefault();
     x++;
   }
   break;
